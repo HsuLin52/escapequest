@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+// Component of the page after failing to escape
 export default function FailPage() {
   return (
     <div className="end-screen fail">

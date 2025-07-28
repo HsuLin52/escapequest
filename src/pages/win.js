@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+// Component of the page after escaping
 export default function WinPage() {
   return (
     <div className="end-screen success">

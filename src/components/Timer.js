@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
+// Timer component
 export default function Timer({ duration }) {
   const [timeLeft, setTimeLeft] = useState(duration);
   const router = useRouter();

@@ -1,4 +1,4 @@
-/* Cream Background Home Page */
+/* Home Page */
 body {
   margin: 0;
   padding: 0;
@@ -44,6 +44,11 @@ body {
 .button-group button:hover {
   background-color: #e0c097;
   color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .welcome-message {

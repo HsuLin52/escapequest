@@ -1,0 +1,40 @@
+{
+  "puzzles": [
+    {
+      "title": "Whispering Walls",
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+      "answer": "echo",
+      "hint": "You hear it when you're alone… and call out."
+    },
+    {
+      "title": "The Candlestick Riddle",
+      "question": "The more you take away from me, the bigger I get. What am I?",
+      "answer": "hole",
+      "hint": "You dig me… deeper and deeper."
+    },
+    {
+      "title": "Tomb Room Clock",
+      "question": "What runs but never walks, has a bed but never sleeps?",
+      "answer": "river",
+      "hint": "It flows endlessly… even underground."
+    },
+    {
+      "title": "Portrait of Lies",
+      "question": "I am not alive, but I grow. I don’t have lungs, but I need air. What am I?",
+      "answer": "fire",
+      "hint": "I consume, I crackle, I destroy."
+    },
+    {
+      "title": "The Mirror Truth",
+      "question": "You see me in water but never get wet. What am I?",
+      "answer": "reflection",
+      "hint": "You follow it in mirrors… but it’s never real."
+    },
+    {
+      "title": "The Final Knock",
+      "question": "I creep without legs, I whisper without a voice, I chill without touch. What am I?",
+      "answer": "shadow",
+      "hint": "It always follows, especially in dim light."
+    }
+  ]
+}

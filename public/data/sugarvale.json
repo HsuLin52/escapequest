@@ -1,0 +1,40 @@
+{
+  "puzzles": [
+    {
+      "title": "Candy Code",
+      "question": "I’m not alive, but I can grow.\nI don’t have eyes, but I can glow.\nI’m made in a pot, but not from a seed. What am I?",
+      "answer": "cotton candy",
+      "hint": "Spun, not grown. Melts on your tongue."
+    },
+    {
+      "title": "Muffin Mix-Up",
+      "question": "If two muffins take 20 minutes to bake,\nhow long would eight muffins take in the same oven?",
+      "answer": "20 minutes",
+      "hint": "They all bake together — not one after the other!"
+    },
+    {
+      "title": "Tart Tray Trick",
+      "question": "Which one of these does not belong in a bakery?\n\nA) Whisk\nB) Rolling Pin\nC) Toaster\nD) Measuring Cups",
+      "answer": "C",
+      "hint": "The others help with baking — not toasting."
+    },
+    {
+      "title": "Sugarplum Switch",
+      "question": "What comes in a cone but isn’t an ice cream,\nmelts with heat and sparkles with gleam?",
+      "answer": "sugar crystal",
+      "hint": "You may find it growing on a stick."
+    },
+    {
+      "title": "Frosting Riddle",
+      "question": "I can be whipped, piped, or spread.\nI sit on top, but I’m not the bread. What am I?",
+      "answer": "frosting",
+      "hint": "The prettiest part of a cake!"
+    },
+    {
+      "title": "Sprinkle Lock",
+      "question": "You need the code to unlock the sprinkle jar.\nClue: The code is the number of legs on:\n– 1 gingerbread man\n– 1 cake stand\n– 2 stools",
+      "answer": "7",
+      "hint": "Count only what’s on the floor!"
+    }
+  ]
+}

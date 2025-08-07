@@ -1,0 +1,92 @@
+/* Escape Succeed and Fail Pages Styling */
+
+.endScreen {
+  min-height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0e041a, #1a0b2e);
+  font-family: 'Creepster', cursive;
+  padding: 40px 20px;
+  color: #ffa0bd;
+}
+
+.fancyBox {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffd8e4;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #ffa0bd;
+  box-shadow: 0 0 30px #ffa0bd88;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.endTitle {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ffc6da;
+  text-shadow: 2px 2px 8px #000;
+  font-family: 'Creepster', cursive;
+}
+
+.endText,
+.endFlair {
+  color: #ffd8e4;
+  text-shadow: 1px 1px 6px #000000aa;
+  font-size: 1.2rem;
+}
+
+.endButton {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #ffa0bd;
+  color: #1a0b2e;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ffa0bd;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.endButton:hover {
+  background-color: #ffc0cd;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Mobile (The rest of pages)*/
+@media (max-width: 768px) {
+  .fancyBox {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .endTitle {
+    font-size: 1.8rem;
+  }
+
+  .endButton {
+    font-size: 1.1rem;
+    padding: 12px;
+    width: 80%;
+  }
+
+  .endScreen {
+    padding: 20px;
+    text-align: center;
+  }
+}

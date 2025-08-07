@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 // Home Page component
 export default function Home() {
@@ -16,16 +17,16 @@ export default function Home() {
       <Head>
         <title>EscapeQuest</title>
       </Head>
-      <div className="home-container">
-        <h1 className="home-title">EscapeQuest</h1>
-        <p className="welcome-message">
+      <div className={styles.homeContainer}>
+        <h1 className={styles.homeTitle}>EscapeQuest</h1>
+        <p className={styles.welcomeMessage}>
           Welcome, Detective! Choose your theme and begin your quest to escape before time runs out.
         </p>
         {/* Button group to select different escape room themes */}
-        <div className="button-group">
-          <button onClick={() => handleSelect('eldoria')}>🏰 Eldoria</button>
-          <button onClick={() => handleSelect('mirrors')}>🪞 Mirrors</button>
-          <button onClick={() => handleSelect('sugarvale')}>🧁 Sugarvale</button>
+        <div className={styles.buttonGroup}>
+          <button className={styles.themeButton} onClick={() => handleSelect('eldoria')}>Eldoria</button>
+          <button className={styles.themeButton} onClick={() => handleSelect('mirrors')}>Mirrors</button>
+          <button className={styles.themeButton} onClick={() => handleSelect('sugarvale')}>Sugarvale</button>
         </div>
       </div>
     </>

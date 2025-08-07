@@ -2,48 +2,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdf6e3;
-  color: #2e2e2e;
+  font-family: 'Creepster', sans-serif;
+  background: url('/photo.png');
+  background-size: cover;
+  color: black;
+  font-size: 50px;
+  
 }
 
-.home-container {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.home-title {
+button {
   font-family: 'Creepster', cursive;
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #5a3e36;
-}
-
-.button-group {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.button-group button {
-  color: #5a3e36;
-  background-color: #fff2d8;
-  border: 2px solid #e0c097;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button-group button:hover {
-  background-color: #e0c097;
-  color: white;
+  transition: background 0.3s;
 }
 
 button:disabled {
@@ -51,270 +20,26 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.welcome-message {
-  font-size: 1.1rem;
-  color: #6b4f38;
-  margin-bottom: 30px;
-  max-width: 800px;
-}
-
-/* Escape Room Layout */
-.room-container {
-  min-height: 90vh;
-  background-color: #fef7e5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-.room-box {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  width: 100%;
-  max-width: 600px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f2e6d0;
-}
-
-.feedback-message {
-  margin-top: 10px;
-  font-style: italic;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background-color: #fff2d8;
-  color: #5a3e36;
-  box-shadow: 0 0 8px rgba(255, 235, 168, 0.5);
-}
-
-/* Timer */
-.timer {
-  font-weight: bold;
-  color: #5a3e36;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Puzzle Title & Question */
-.puzzle-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #2e2e2e;
-}
-
-.puzzle-question {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Input & Buttons */
-.input-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.input-group input {
-  flex: 1;
-  min-width: 0;
-}
-
-.input-group button {
-  white-space: nowrap;
-}
-
-input {
-  padding: 10px 16px;
-  font-size: 1rem;
-  background-color: #fffaf0;
-  border: 2px solid #e0c097;
-  border-radius: 10px;
-  outline: none;
-}
-
 input:focus {
-  border-color: #d4ac82;
-  box-shadow: 0 0 5px rgba(224, 192, 151, 0.5);
+  border-color: #30134f;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-button {
-  background-color: #e0c097;
-  color: #5a3e36;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-left: 10px;
+p {
+  color: #30134f;
 }
 
-button:hover {
-  background-color: #d4ac82;
-}
-
-/* Hint Text */
-.hint-text {
-  margin-top: 10px;
-  color: #5a3e36;
-  font-style: italic;
-}
-
-/* Progress Bar */
-.progress-container {
-  margin-top: 25px;
-  background: #eee;
-  border-radius: 6px;
-  overflow: hidden;
-  height: 10px;
-}
-
-.progress-bar {
-  background-color: #d4ac82;
-  height: 100%;
-  transition: width 0.4s ease;
-}
-
-/* Escaped Pages */
-.end-screen {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #fffaf0, #fdf6e3);
-  font-family: 'Segoe UI', sans-serif;
-  padding: 40px;
-}
-
-/* Escape Succeeded Page */
-.end-box {
-  text-align: center;
-  padding: 40px;
-  border-radius: 20px;
-  background: #fffdf4;
-  border: 4px solid #e0c097;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  max-width: 500px;
-  width: 90%;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.success .end-box h1 {
-  color: #5a3e36;
-}
-
-.success .flair {
-  color: #9b6b3f;
-  font-style: italic;
-}
-
-.play-again {
-  background-color: #5a3e36;
-  color: #fff8e6;
-  padding: 12px 24px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.play-again:hover {
-  background-color: #3c281c;
-}
-
-/* Escape Failed Page */
-.fail .end-box {
-  background: #fff7f7;
-  border: 4px solid #e59b9b;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.fail .end-box h1 {
-  color: #6b1a1a;
-}
-
-.fail .flair {
-  color: #8a4a4a;
-  font-style: italic;
-}
-
-.play-again {
-  background-color: #5a3e36;
-  color: #fff8e6;
-  padding: 12px 24px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.play-again:hover {
-  background-color: #3c281c;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design for Mobile */
+/* Responsive Design for Mobile*/ 
 @media (max-width: 768px) {
-  .home-title {
-    font-size: 2rem;
-    padding: 0 10px;
-  }
-
-  .welcome-message {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .button-group {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .room-box,
-  .end-box {
-    width: 95%;
-    padding: 20px;
-  }
-
   button {
     width: 100%;
     margin: 5px 0;
   }
+}
 
-  .progress-container {
-    height: 8px;
-  }
-
-  .input-group {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .input-group input {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .input-group input,
-  .input-group button {
-    width: 100%;
-    box-sizing: border-box;
+/* Responsive Design for Mobile (The rest of pages)*/
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
   }
 }

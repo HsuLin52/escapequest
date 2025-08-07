@@ -1,0 +1,172 @@
+/* Escape room Page Styling */
+
+.roomContainer {
+    background: url('/photo.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 300px;
+    height: 65vh;
+}
+
+.roomBox {
+    background: rgba(47, 18, 51, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffc0cd;
+}
+
+.feedbackMessage {
+    margin-top: 10px;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: #ffa0bd;
+    color: #30134f;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.timer {
+    font-weight: bold;
+    color: #ffc0cd;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.puzzleTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffc0cd;
+    text-align: left;
+}
+
+.puzzleQuestion {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ffc0cd;
+    text-align: left;
+}
+
+.inputGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.inputGroup input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 16px;
+    font-size: 1rem;
+    background-color: white;
+    border: 4px solid #30134f;
+    border-radius: 15px;
+    outline: none;
+}
+
+.inputGroup input:focus {
+    border-color: #30134f;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.inputGroup button {
+    white-space: nowrap;
+    background-color: #ffc0cd;
+    color: #30134f;
+    font-weight: bold;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.inputGroup button:hover {
+    background-color: white;
+}
+
+.hintText {
+    margin-top: 10px;
+    color: #ffc0cd;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.progressContainer {
+    margin-top: 25px;
+    background: #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progressBar {
+    background-color: #ffa0bd;
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+/* Responsive Design for Mobile*/
+@media (max-width: 768px) {
+    .roomContainer {
+        padding: 40px 20px;
+        min-height: 90vh;
+    }
+
+    .roomBox {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .hintText, .feedbackMessage {
+        font-size: 15px;
+    }
+
+    .timer {
+        font-size: 1.5rem;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .puzzleTitle {
+        font-size: 1.4rem;
+    }
+
+    .puzzle-question {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .inputGroup input,
+    .inputGroup button {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .progressContainer {
+        height: 6px;
+        margin-top: 15px;
+    }
+}

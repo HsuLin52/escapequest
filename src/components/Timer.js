@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
+import styles from '../styles/EscapeRoom.module.css';
+
+
 // Timer component
 export default function Timer({ duration }) {
   const [timeLeft, setTimeLeft] = useState(duration);
@@ -17,5 +20,5 @@ export default function Timer({ duration }) {
 
   const formatTime = t => `${Math.floor(t / 60)}:${('0' + (t % 60)).slice(-2)}`;
 
-  return <div className="timer">⏳ Time Left: {formatTime(timeLeft)}</div>;
+  return <div className={styles.timer}>⏳ Time Left: {formatTime(timeLeft)}</div>;
 }

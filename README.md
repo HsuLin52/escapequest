@@ -104,5 +104,3 @@
    - Displays theme-specific error message
 7. Timeout:
    - Navigates to `/fail`
-
----

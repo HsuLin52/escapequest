@@ -14,7 +14,7 @@ export default function WinPage() {
         <div className={styles.fancyBox}>
           <h1 className={styles.endTitle}>You Escaped!</h1>
           <p className={styles.endText}>Congratulations, you cracked every clue and escaped in time.</p>
-          <p className={styles.endFlair}>✨ Victory belongs to the clever! ✨</p>
+          <p className={styles.endFlair}>Victory belongs to the clever!</p>
           <Link href="/" className={styles.endButton}>Play Again</Link>
         </div>
       </div>

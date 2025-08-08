@@ -81,7 +81,7 @@ export default function EscapeRoom({ theme }) {
         </Head>
 
       <div className={styles.roomContainer}>
-        <MusicToggle theme={theme} />
+        {/* <MusicToggle theme={theme} /> */}
         <div className={styles.roomBox}>
           <Timer duration={600} />
 

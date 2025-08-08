@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import Timer from '../components/Timer';
 import Puzzle from '../components/Puzzle';
@@ -12,6 +13,8 @@ export default function EscapeRoom({ theme }) {
   const [index, setIndex] = useState(0); // Current puzzle index
   const [feedback, setFeedback] = useState(''); // Message after user answers
   const router = useRouter();
+
+  const formattedTheme = theme.charAt(0).toUpperCase() + theme.slice(1); // Theme to display in the page title
 
   // Fetching Puzzle Data When Theme Changes
   useEffect(() => {
@@ -72,22 +75,28 @@ export default function EscapeRoom({ theme }) {
 
   // Page Layout
   return (
-    <div className={styles.roomContainer}>
-      <MusicToggle theme={theme} />
-      <div className={styles.roomBox}>
-        <Timer duration={600} />
+    <>
+      <Head>
+          <title>EscapeQuest | {formattedTheme} Room</title>
+        </Head>
 
-        <div className={styles.puzzleTitle}>{puzzle.title}</div>
-        <div className={styles.puzzleQuestion}>{puzzle.question}</div>
+      <div className={styles.roomContainer}>
+        <MusicToggle theme={theme} />
+        <div className={styles.roomBox}>
+          <Timer duration={600} />
 
-        <Puzzle puzzle={puzzle} onSubmit={handleAnswer} />
+          <div className={styles.puzzleTitle}>{puzzle.title}</div>
+          <div className={styles.puzzleQuestion}>{puzzle.question}</div>
 
-        {feedback && (
-          <p className={styles.feedbackMessage}>{feedback}</p>
-        )}
+          <Puzzle puzzle={puzzle} onSubmit={handleAnswer} />
 
-        <ProgressBar current={current} total={total} />
+          {feedback && (
+            <p className={styles.feedbackMessage}>{feedback}</p>
+          )}
+
+          <ProgressBar current={current} total={total} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

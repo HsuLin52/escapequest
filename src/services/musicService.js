@@ -4,12 +4,12 @@ export async function fetchBackgroundTracks(theme) {
 
   // Maps theme to a suitable Jamendo tag
   const tagMap = {
-    eldoria: 'fantasy',
-    mirrors: 'ambient',
-    sugarvale: 'happy',
+    eldoria: 'castle',
+    mirrors: 'mystical',
+    sugarvale: 'sweet',
   };
 
-  const tag = tagMap[theme] || 'fantasy'; // Fallback tag if theme is not found
+  const tag = tagMap[theme] || 'adventure'; // Fallback tag if theme is not found
 
   // API call to Jamendo's tracks endpoint with the tag
   const response = await fetch(

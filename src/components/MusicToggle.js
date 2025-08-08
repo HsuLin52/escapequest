@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { fetchBackgroundTracks, playBackground } from '../services/musicService';
 import styles from '../styles/MusicToggle.module.css';
 

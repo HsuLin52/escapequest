@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react';
 
 import styles from '../styles/EscapeRoom.module.css';
+import { playEffect } from '../services/effectService';
 
 // Puzzle component that receives a puzzle object and a submit handler function
 export default function Puzzle({ puzzle, onSubmit }) {
-  const [userAnswer, setUserAnswer] = useState('');
-  const [shown, setShown] = useState(false); // Controls whether the hint should be displayed
-  const [clicks, setClicks] = useState(0); // Tracks how many times the hint button has been clicked
+  const [userAnswer, setUserAnswer] = useState(''); // State to store the user's answer
+  const [shown, setShown] = useState(false); // State to determine if the hint is currently shown
+  const [clicks, setClicks] = useState(0); // State to count how many times the hint button has been clicked
+
+  // URLs for sound effects
+  const correctSound = 'https://freesound.org/data/previews/66/66717_931655-lq.mp3'; // Correct Answer
+  const wrongSound   = 'https://freesound.org/data/previews/331/331912_3248244-lq.mp3'; // Wrong Answer
 
   // Reset everything when puzzle changes
   useEffect(() => {
@@ -22,10 +27,12 @@ export default function Puzzle({ puzzle, onSubmit }) {
     }
   };
 
-  // Function to handle after user's submission
+  // Function to check answer and play corresponding sound
   const handleSubmit = () => {
-    onSubmit(userAnswer);
-    setUserAnswer('');
+    const isCorrect = userAnswer.trim().toLowerCase() === puzzle.answer.toLowerCase(); // Checks whether the user's answer is correct
+    playEffect(isCorrect ? correctSound : wrongSound); // Plays correct sound or wrong sound
+    onSubmit(userAnswer); // Sends the user's answer to the parent component
+    setUserAnswer(''); // Clears the input field
   };
 
   return (

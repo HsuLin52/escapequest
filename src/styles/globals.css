@@ -1,13 +1,17 @@
 /* Home Page */
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Creepster', sans-serif;
   background: url('/photo.png');
   background-size: cover;
   color: black;
   font-size: 50px;
-  
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 button {

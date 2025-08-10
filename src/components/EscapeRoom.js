@@ -14,7 +14,7 @@ export default function EscapeRoom({ theme }) {
   const [feedback, setFeedback] = useState(''); // Message after user answers
   const router = useRouter();
 
-  const formattedTheme = theme.charAt(0).toUpperCase() + theme.slice(1); // Theme to display in the page title
+  const formattedTheme = (theme ?? '').charAt(0).toUpperCase() + (theme ?? '').slice(1); // Theme to display in the page title
 
   // Fetching Puzzle Data When Theme Changes
   useEffect(() => {
